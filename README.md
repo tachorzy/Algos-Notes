@@ -1,0 +1,1 @@
+## These notes were intended to be written and read using Obsidian, so they may not appear as neat here on GitHub.
