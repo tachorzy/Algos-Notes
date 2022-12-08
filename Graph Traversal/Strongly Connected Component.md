@@ -45,7 +45,7 @@ s = null
 order = []
 function dfs_loop(G):
 	for node in G:
-		if node is not explored do:
+		if node is unvisited do:
 			s = node
 			dfs(G, node)
 
