@@ -1,11 +1,11 @@
-# <u>Topological Sort</u>
+	# <u>Topological Sort</u>
 You can only do a topological sort on a **Directed Acyclic Graph (DAG)**.
 All the edges go in the <b><u>same direction</u></b>. Either all edges point right to left or all edges point left to right. 
 * The resulting order thus follows each node appearing before each of the nodes it points to.
 * **NOTE:** Topological orderings are **NOT** unique.
 ### <u>Why Can't a Cyclical Graph Have a Topological Ordering?</u>
 There cannot be an order if there's a **cyclical dependency** since there's nowhere to start. 
-You'll have trouble ordering the nodes in a single direction if there's a cycle.
+	You'll have trouble ordering the nodes in a single direction if there's a cycle.
 **Every node in a cycle depends on another**, so any graph with a directed cycle is therefore forbidden.
 ### <u>Example from interviewcake.com</u>
 ![](https://www.interviewcake.com/images/svgs/messy_graph.svg?bust=210)

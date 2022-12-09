@@ -13,9 +13,9 @@ Notice what make each of these components strongly connected. Each node can reac
 ### <u>Finding Strong Components</u>
 ### <u>Kosaraju's Algorithm</u>
 Kosaraju's Algorithm is a DFS based algorithm used to find Strongly Connected Components in a graph. 
-* Do a DFS on the original graph, recording the finish times for each node.
-* Transpose the graph (reverse the edges), done with an adjacency list.
-* Do a DFS one by one in the now reversed order of the finish times. Until all nodes are visited.
+* Do a **DFS on the original graph**, recording the **finish times** for each node.
+* **Transpose** the graph (reverse the edges), done with an adjacency list.
+* Do a **DFS** one by one in the now reversed order of the finish times. Until all nodes are visited.
 
 You can think of the algorithm as this, we use DFS to find the correct order of nodes, and then we do another DFS going in that order.
 * The reversed order we get from the transposed graph is the correct order we need. 
