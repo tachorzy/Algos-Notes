@@ -45,3 +45,6 @@ While DFS can be **implemented using a stack**, I personally prefer using just p
 In the recursive implementation above, we **check if a vertex is unvisited**. If so we **mark** that vertex. Then we make a **recursive call on each of its neighbors**. 
 ##### <u>Iterative Implementation</u>
 The recursive nature of DFS can be implemented using a stack. First you pick a node to start from and push all of its adjacent nodes into the stack. Pop from the top of the stack to select the next node to visit and push all its adjacent nodes into a stack. Repeat this process until the stack is empty. It's important to ensure that all of the visited nodes are marked
+
+### <u>Time Complexity</u>
+The worst case time complexity is O(V + E).
