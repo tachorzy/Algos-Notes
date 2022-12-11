@@ -1,4 +1,4 @@
-	# <u>Topological Sort</u>
+# <u>Topological Sort</u>
 You can only do a topological sort on a **Directed Acyclic Graph (DAG)**.
 All the edges go in the <b><u>same direction</u></b>. Either all edges point right to left or all edges point left to right. 
 * The resulting order thus follows each node appearing before each of the nodes it points to.
@@ -21,19 +21,17 @@ function topsort(G):
 	ordering = [0,..., 0]
 	for each v ∈ V do:
 		if visited[v] is false do:
-			position = dfs(position, v, V, ordering, G)
+			dfs(v, visited, ordering, G)
 	return ordering
 	
 // Executes Depth First Search DFS,	inserts a node directly inside the next valid position of the array and returns the next position, pos-1, as we are going in reverse order.
-function dfs(pos, v, V, ordering, G):
-	V[v] = true
-	edges = g.getEdges(v)
+function dfs(v, visited, ordering, G):
+	visited[v] = true
+	E = G.getEdges(v) //edges tell us the neighbors
 	for each e ∈ E do:
-		if V[e] is false do:
-			pos = dfs(pos, e, V, ordering, G)
-	add vertex v to the ordering list at position pos
-	return decrement of position
-	
+		if visited[e] is false do:
+			dfs(pos, e, visited, ordering, G)
+	ordering.append(v)
 ```
 ### <u>Algorithm Description</u>
 <ol>
